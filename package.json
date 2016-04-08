@@ -20,9 +20,11 @@
   },
   "keywords": [
     "react-native",
-    "react-component",
-    "sound",
-    "audio"
+    "styles",
+    "inline-styles",
+    "media queries",
+    "StyleSheet",
+    "react"
   ],
   "author": "Charles King <charlie@rinconstrategies.io> (http://rinconstrategies.io)",
   "license": "MIT",
