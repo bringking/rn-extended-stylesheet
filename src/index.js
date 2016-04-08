@@ -30,7 +30,7 @@ export const matchMediaQuery = ( size, mq ) => {
                 }
 
                 if ( match.modifier === 'max' ) {
-                    max = size.width < parsedVal;
+                    max = size.width <= parsedVal;
                 }
 
             }
@@ -78,6 +78,7 @@ export const mergeSheetWithSize = ( size, baseSheet = {}, mediaSpecific = {}, re
 
     // merge the rest
     let restKeys = Object.keys(rest);
+
     if ( restKeys.length ) {
         restKeys.forEach(( k ) => {
             // add to the result if not present
@@ -85,7 +86,7 @@ export const mergeSheetWithSize = ( size, baseSheet = {}, mediaSpecific = {}, re
                 result[k] = [];
             }
             // add the item
-            result[k].push = restKeys[k];
+            result[k].push(rest[k]);
         });
     }
 
@@ -101,11 +102,11 @@ const ExtendedStyleSheet = {
      * Create a StyleSheet from an object containing React Native Styles.
      * The stylesheet can also include Media Queries to match a set of styles
      * against the current window size
-     * @param baseStyleSheet The styles to create a sheet from
+     * @param baseStyleSheet {object} The styles to create a sheet from
      * @returns {Function} A function to evaluate at render time. This function will merge
      * any window specific styles or overrides with the base stylesheet to give you the final StyleSheet
      */
-    create( baseStyleSheet ) {
+    create( baseStyleSheet = {} ) {
         // get keys
         let styleKeys = Object.keys(baseStyleSheet);
 
@@ -135,6 +136,7 @@ const ExtendedStyleSheet = {
             // compare the current window size
             let currentSize = Dimensions.get('window');
             if ( other || currentSize.width !== lastSize.width || currentSize.height !== lastSize.height ) {
+                lastSize = currentSize;
                 return mergeSheetWithSize(lastSize, baseSheet, mediaSpecificValues, other);
             }
             // no overrides specified or the window size hasn't changed, so return the cached merged
