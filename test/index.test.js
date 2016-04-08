@@ -42,7 +42,7 @@ describe('react-native-extended-stylesheet', () => {
                     width: 100
                 },
                 button: {
-                    color: "red"
+                    color: 'red'
                 }
             });
             expect(Object.keys(getSheet()).length).to.equal(2);
@@ -56,7 +56,7 @@ describe('react-native-extended-stylesheet', () => {
             });
 
             expect(getSheet().button[0]).to.eql({
-                color: "red"
+                color: 'red'
             });
         });
 
@@ -67,16 +67,16 @@ describe('react-native-extended-stylesheet', () => {
             let getSheet = ExtendedStyleSheet.create({
                 container: {
                     width: 100,
-                    "@media (min-width: 400)": {
+                    '@media (min-width: 400)': {
                         width: 200
                     }
                 },
                 button: {
-                    color: "red",
-                    "@media (min-width: 200)": {
+                    color: 'red',
+                    '@media (min-width: 200)': {
                         color: 'blue'
                     },
-                    "@media (max-width:600)": {
+                    '@media (max-width:600)': {
                         color: 'red'
                     }
                 }
@@ -98,19 +98,20 @@ describe('react-native-extended-stylesheet', () => {
             });
         });
 
-        it('given an object with keys of objects with media queries, if the media query doesn\'t match it won\'t be included', ()=> {
+        it('given an object with keys of objects with media queries, ' +
+        'if the media query doesn\'t match it won\'t be included', ()=> {
             // Dimensions.get('window') mocked to {width:500,height:500}
             // See ./mocks/react_native.js
             let getSheet = ExtendedStyleSheet.create({
                 button: {
-                    color: "red",
-                    "@media (min-width:200) and (max-width:500)": {
+                    color: 'red',
+                    '@media (min-width:200) and (max-width:500)': {
                         color: 'red'
                     },
-                    "@media (min-width: 200)": {
+                    '@media (min-width: 200)': {
                         color: 'yellow'
                     },
-                    "@media (max-width:400)": {
+                    '@media (max-width:400)': {
                         color: 'blue'
                     }
                 }
@@ -126,33 +127,33 @@ describe('react-native-extended-stylesheet', () => {
             });
         });
 
-        it('given an override object, it should at it last', ()=> {
+        it('given an override object, it should add it last', ()=> {
             // Dimensions.get('window') mocked to {width:500,height:500}
             // See ./mocks/react_native.js
             let getSheet = ExtendedStyleSheet.create({
                 button: {
-                    color: "red",
-                    "@media (min-width: 200) and (max-width: 500)": {
+                    color: 'red',
+                    '@media (min-width: 200) and (max-width: 500)': {
                         color: 'red'
                     },
-                    "@media (min-width: 200)": {
+                    '@media (min-width: 200)': {
                         color: 'yellow'
                     },
-                    "@media (max-width:400)": {
+                    '@media (max-width:400)': {
                         color: 'blue'
                     }
                 }
             });
             const overiddenSheet = getSheet({
-                button:{
-                    color:"black"
+                button: {
+                    color: 'black'
                 }
             });
 
             expect(overiddenSheet.button.length).to.equal(4);
 
             expect(overiddenSheet.button[3]).to.eql({
-                color:"black"
+                color: 'black'
             });
 
         });
