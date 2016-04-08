@@ -1,5 +1,5 @@
 {
-  "name": "react-native-extended-stylesheet",
+  "name": "rn-extended-stylesheet",
   "version": "0.0.1",
   "description": "An extended StyleSheet for React Native that supports Media Queries, caching and lazy overrides ",
   "main": "lib/index.js",
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RinconStrategies/react-native-extended-stylesheet"
+    "url": "git+https://github.com/RinconStrategies/rn-extended-stylesheet"
   },
   "keywords": [
     "react-native",
