@@ -28,19 +28,19 @@
   ],
   "author": "Charles King <charlie@rinconstrategies.io> (http://rinconstrategies.io)",
   "license": "MIT",
-  "dependencies":{
-    "lodash.pick": "3.1.0",
+  "dependencies": {
+    "lodash.pick": "4.2.0",
     "css-mediaquery": "^0.1.2"
   },
   "peerDependencies": {
     "react-native": ">=0.8.0",
     "react": ">=0.14.5"
   },
-  "devDependencies":{
+  "devDependencies": {
     "chai": "*",
     "dirty-chai": "^1.2.2",
     "mocha": "*",
-    "eslint-plugin-mocha": "~2.0.0",
+    "eslint-plugin-mocha": "~2.2.0",
     "eslint": "^2.7.0",
     "babel-cli": "^6.0.0",
     "babel-core": "^6.5.2",
