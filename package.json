@@ -29,7 +29,7 @@
   "author": "Charles King <charlie@rinconstrategies.io> (http://rinconstrategies.io)",
   "license": "MIT",
   "dependencies": {
-    "lodash.pick": "4.2.0",
+    "lodash.pick": "3.1.0",
     "css-mediaquery": "^0.1.2"
   },
   "peerDependencies": {
