@@ -39,7 +39,7 @@
   "devDependencies": {
     "chai": "*",
     "dirty-chai": "^1.2.2",
-    "mocha": "*",
+    "mocha": "2.5.3",
     "eslint-plugin-mocha": "~2.2.0",
     "eslint": "^2.7.0",
     "babel-cli": "^6.8.0",
