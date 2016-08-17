@@ -1,10 +1,10 @@
 # rn-extended-stylesheet
 An extended StyleSheet for React Native that supports Media Queries, caching and lazy overrides
 
-[![Dependency Status](https://david-dm.org/RinconStrategies/rn-extended-stylesheet.svg)](https://david-dm.org/RinconStrategies/rn-extended-stylesheet)
-[![peerDependency Status](https://david-dm.org/RinconStrategies/rn-extended-stylesheet/peer-status.svg)](https://david-dm.org/RinconStrategies/rn-extended-stylesheet#info=peerDependencies)
-[![devDependency Status](https://david-dm.org/RinconStrategies/rn-extended-stylesheet/dev-status.svg)](https://david-dm.org/RinconStrategies/rn-extended-stylesheet#info=devDependencies)
-[![build status](https://travis-ci.org/RinconStrategies/rn-extended-stylesheet.svg?branch=master)](https://travis-ci.org/RinconStrategies/rn-extended-stylesheet)
+[![Dependency Status](https://david-dm.org/bringking/rn-extended-stylesheet.svg)](https://david-dm.org/bringking/rn-extended-stylesheet)
+[![peerDependency Status](https://david-dm.org/bringking/rn-extended-stylesheet/peer-status.svg)](https://david-dm.org/bringking/rn-extended-stylesheet#info=peerDependencies)
+[![devDependency Status](https://david-dm.org/bringking/rn-extended-stylesheet/dev-status.svg)](https://david-dm.org/bringking/rn-extended-stylesheet#info=devDependencies)
+[![build status](https://travis-ci.org/bringking/rn-extended-stylesheet.svg?branch=master)](https://travis-ci.org/bringking/rn-extended-stylesheet)
 
 
 #Installation
